@@ -1,0 +1,28 @@
+# Key : Value
+"apple" : "this is a red fruit"
+1: "This is my roll number"
+
+---
+{mango: "yellow" , age: 57} # another way to add key value pair in yaml
+
+
+--- # This is document seperator.
+
+# Lists
+- apple
+- mango
+- mbanana
+- Banana
+
+---
+# Block in yaml
+
+cities:
+ - Delhi
+ - Noida
+ - Mumbai
+ - Banglore
+
+---
+cities: [Delhi , Noida , Mumbai , Banglore] # This is same as upper one use this when you don't want hassle of indentation
+... # These 3 dots are way to end the file.

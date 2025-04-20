@@ -1,0 +1,75 @@
+# String Variables
+myself: Sachin Singh # can be written without quotes
+fruit: "Mango" # With double quotes
+profession: 'SWE' # with single quotes
+
+bio: | # Way to write multi line string
+  Hey My name is Sachin and.
+  I am a Software Engineer.
+
+# We are writin in multiple lines everywhere it is considered a single line
+message: >
+  this will
+  all be considered a single
+  line.
+
+# Same as upper one
+message: this will all be considered a single line.
+
+# Int type
+number: 98
+
+# Float type
+marks: 99.99
+
+# Boolean
+booleanValue: NO # can also write n , N , false , False , FALSE
+# same for true -> y , Y , Yes , yes
+
+# Yaml can detect the types but can also specify explicitly
+
+# Int type 
+
+zero: !!int 0
+
+positiveNumber: !!int 45
+
+negativNumber: !!int -46
+
+binaryNum: !!int 0b11001
+
+ocatalNum: !!int 0675
+
+hexa: !!int 0x45
+
+commaValue: !!int +540_000 # it will give 540,000
+
+exponentialNums: !!int 6.0256E56
+
+# Float type
+
+marks: !!float 56.99
+
+infinite: !!float .inf
+
+not a num: .nan
+
+# boolean type
+booleanvalue: !!bool NO
+
+# string type
+
+message: !!str printing string datatype.
+
+# null
+surname: !!null Null # null NULL ~
+~: this is null.
+
+# dates and time
+date: !!timestamp 1999-12-08
+
+IndiaTime: !!timestamp 1999-12-08T02:59:43.10 +5:30
+
+noTimeZone: !!timestamp 1999-12-08T02:59:43.10
+
+

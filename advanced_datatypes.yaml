@@ -1,0 +1,89 @@
+# Lists
+student: !!seq
+ - marks
+ - name
+ - roll_no
+---
+# same as above written different
+student_1: [marks , name , roll_no]
+---
+# Some of the keys of the seq   can be empty also that is called sparse seq
+sparseSeq: 
+  - hey
+  - how
+  -
+  - null
+  - sup
+  - buddy
+---
+# nested sequence
+#seq of seq
+-
+ - mango
+ - apple
+ - Banana
+-
+ - grapes
+ - khajoor
+ - watermelon
+
+---
+# Key value pairs are called maps
+!!map
+
+# nested mappings: map within a map
+name: Sachin Singh
+role:
+  age: 25
+  job: swe
+# or we can write line
+name_1: Sachin Singh
+role_1 : {age: 25 , job: swe}
+
+# Pairs: key may have duplicate values
+# !!Pairs
+
+pair_example: !!Pairs
+  - job: SWE
+  - job: teacher
+#same as
+pair_example: !!pairs [job: SWE , job: teacher]
+# This will be converted to an array of hashtables.
+
+# !!set will allow you to have unique values
+
+unique_name: !!set
+  ? Sachin
+  ? Abhi
+  ? Arpit
+
+# dictionary !!omap
+
+people: !!omap
+  - Sachin:
+      name: Sachin Singh
+      age: 25
+      height: 6
+  - Abhijeet:
+      name: Abhijeet OBC
+      age: 34
+      height:
+
+# reusing some properties using anchoirs
+likings: &likes
+  fav_fruit: mango
+  dislikes: grapes
+
+Person1:
+  name: Sachin Singh
+  << : *likes 
+
+Person2:
+  name: Abhijeet
+  << : *likes 
+  dislikes: berries
+
+Person3:
+  name: Arpit bkl
+  << : *likes 
+  dislikes: banana
